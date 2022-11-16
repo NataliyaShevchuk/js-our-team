@@ -53,22 +53,5 @@ console.log(membriTeam[3]);
 console.log(membriTeam[4]);
 console.log(membriTeam[5]);
 
-// for (i = 0; i < team.length; i++) {
-//     const info = team[i];
-//     const infoTeam = document.createElement("div");
-//     infoTeam.classList.add("m-3");
-//     listaTeamEl.append(infoTeam);
-//     infoTeam.innerHTML += `<strong>Name:</strong> ${info.name}; <strong>Role:</strong> ${info.role};`;
-//     const imgEl = document.createElement("img");
-//     imgEl.src = "img/" + info.photo;
-//     infoTeam.append(imgEl);
-// }
-
-for ( let i = 0; i < membriTeam.length; i++){
-    const team = membriTeam[i];
-    const divInfo = document.createElement("div");
-    spazioInfo.append(divInfo);
-    divInfo.innerHTML += `${team.nome}; ${team.ruolo};`;
-}
 
 
