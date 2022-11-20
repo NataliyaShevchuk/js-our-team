@@ -15,7 +15,7 @@
 // Prima la logica in italiano e poi traduciamo in codice.
 // E ricordiamoci che console.log() è nostro amico!
 
-const myCard = document.getElementById("#mycard");
+const myCard = document.getElementById("mycard");
 
 
 const membriTeam = [
@@ -58,15 +58,23 @@ console.log(membriTeam[5]);
 // }
 
 for (let i = 0; i < membriTeam.length; i++){
-
+    
     const membriTeamIndex = membriTeam[i];
-
+    
+    
+    myCard.classList.add("p-2", "row-cols-4", "d-flex", "flex-wrap", "justify-content-center");
+    
+    
     const divEl = document.createElement("div");
     myCard.append(divEl);
-    divEl.innerHTML += `${membriTeamIndex.nome}; ${membriTeamIndex.ruolo};`;
+
     const img = document.createElement("img");
     img.src = "img/" + membriTeamIndex.foto;
     divEl.append(img);
+    img.classList.add("mb-3");
+
+    divEl.innerHTML += `<strong class="mb-2">${membriTeamIndex.nome}</strong> ${membriTeamIndex.ruolo}`;
+    divEl.classList.add("col", "text-center", "card", "p-3", "m-3");
 
 }
 
